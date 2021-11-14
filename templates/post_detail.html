@@ -6,8 +6,13 @@
     <h2>
         {{ post.title }}
     </h2>
-    <h3>{{ post.author }}</h3>
+    
     <p>{{ post.body }}</p>
 </div>
-  
+<h3>Muallif:{{ post.author }}</h3>
+<p><a href="{% url 'post_edit' post.pk %}" class="btn btn-primary">Update</a></p>
+<p><a href="{% url 'post_delete' post.pk %}" class="btn btn-primary">Delete</a></p> 
+
 {% endblock content %}
+
+
